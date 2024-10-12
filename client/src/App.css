@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0c162e; /* Dunkelblauer Hintergrund #001f3f; */
+  color: white; /* Textfarbe auf Weiß setzen */
+  height: 100vh; /* Gesamte Höhe des Viewports */
+  overflow: hidden; /* Verhindert Scrollen */
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Damit der Sternenhimmel hinter dem Inhalt bleibt */
+}
+
+.container-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Container soll die volle Höhe einnehmen */
+  width: 100%;
+}
+
+.container {
+  background: #15264e; /*#0c162e Undurchsichtige Farbe, um den Hintergrund zu verdecken */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  width: 600px; /* Breite der Login-Box */
+  z-index: 1; /* Sicherstellen, dass die Box über dem Sternenhimmel liegt */
+}
+
+.disclaimer-box {
+  background-color: #cf1508; /* Rot hinterlegt */
+  color: white; /* Schriftfarbe weiß */
+  border-radius: 8px; /* Abgerundete Ecken */
+  padding: 10px; /* Innenabstand */
+  margin-bottom: 20px; /* Abstand nach unten */
+  text-align: left; /* Text linksbündig */
+  display: flex; /* Flexbox für das Symbol und den Text */
+  align-items: center; /* Vertikale Ausrichtung */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+a img {
+  cursor: pointer;
+  width: 150px; /* Breite des Buttons kleiner machen */
+  height: auto; /* Höhe automatisch anpassen */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%; /* Breite auf mobilen Geräten anpassen */
+  }
+}

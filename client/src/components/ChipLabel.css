@@ -1,0 +1,46 @@
+.chip-container {
+  position: fixed;
+  bottom: 20px;
+  left: 210px; /* Änderung: von 'right' zu 'left' */
+  background-color: #2c2f38;
+  padding: 8px 12px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chip-label {
+  font-size: 14px;
+  color: #fff;
+}
+
+.chip-label::before {
+  display: inline-block;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.confirm-status-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745; /* Grüne Hintergrundfarbe */
+  color: white; /* Weiße Schriftfarbe */
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px; /* Abstand zum Dropdown-Menü */
+}
+
+.confirm-status-button:hover {
+  background-color: #218838; /* Dunkleres Grün beim Hover */
+}
+
+.status-message {
+  margin-top: 10px;
+  color: #28a745; /* Grüne Schriftfarbe */
+  font-weight: bold;
+}
+

@@ -1,0 +1,191 @@
+/* Styling für den Container der Tabelle */
+.table-container {
+  margin: 20px; /* Abstand um die Tabelle herum */
+  border-radius: 8px; /* Abgerundete Ecken */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Schatten für einen 3D-Effekt */
+  max-height: 300px; /* Maximale Höhe der Tabelle */
+  overflow-y: auto; /* Vertikales Scrollen aktivieren */
+  
+}
+
+/* Styling für den Tabellenkopf */
+.table-header {
+  background-color: #003366; /* Dunkelblauer Hintergrund des Tabellenkopfs */
+}
+
+.table-header th {
+  padding: 12px; /* Innenabstand für die Kopfzellen */
+  border-bottom: 2px solid #007bff; /* Blaue untere Grenze für den Kopfbereich */
+  color: white; /* Weiße Textfarbe für bessere Lesbarkeit */
+  text-align: center; /* Zentrierte Ausrichtung für die Kopfzeilen */
+}
+
+/* Styling für die Zellen der Tabelle */
+.table-body td {
+  padding: 12px; /* Innenabstand für die Zellen */
+  border-bottom: 1px solid #ddd; /* Leichte untere Grenze für die Zellen */
+  transition: background-color 0.3s; /* Weicher Übergang beim Hover */
+  text-align: center; /* Zentrierte Ausrichtung für den Text in den Zellen */
+}
+
+/* Hover-Effekt für Tabellenzeilen */
+.table-body tr:hover {
+  background-color: #0056b3; /* Dunkleres Blau als Hover-Effekt */
+}
+
+/* Styling für die Nachricht, wenn keine Bewerbungen vorhanden sind */
+.no-applications {
+  text-align: center; /* Zentrierte Textausrichtung */
+  padding: 20px; /* Innenabstand für die Nachricht */
+  color: #888; /* Hellere Textfarbe */
+}
+
+/* Haupt-Tabelle */
+.table-idk {
+  width: 100%; /* Tabelle nimmt die volle Breite ein */
+  border-collapse: collapse; /* Entfernt Abstände zwischen Zellen */
+  margin-top: 20px; /* Abstand nach oben */
+  background-color: #2c3e50; /* Dunklerer Hintergrund für die Tabelle */
+  border-radius: 8px; /* Abgerundete Ecken für die Tabelle */
+  overflow: hidden; /* Versteckt überstehende Ecken */
+}
+
+/* Styling für den Container der Dashboard-Karten */
+.dashboard-cards-container {
+  display: flex;
+  justify-content: space-between; /* Gleichmäßiger Abstand zwischen den Karten */
+  margin-top: 20px; /* Abstand zur Tabelle */
+  width: 100%; /* Kartencontainer nimmt volle Breite ein */
+}
+
+/* Styling für einzelne Dashboard-Karten */
+.dashboard-card {
+  flex: 1; /* Karten nehmen den verfügbaren Platz ein */
+  background-color: #2c3e50; /* Dunkler Hintergrund für die Karten */
+  padding: 30px; /* Mehr Innenabstand */
+  margin-right: 10px; /* Abstand zwischen den Karten */
+  border-radius: 8px; /* Abgerundete Ecken */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+  text-align: center; /* Zentrierter Text */
+  font-size: 18px; /* Größere Schrift in den Karten */
+}
+
+/* Entfernt den rechten Rand der letzten Karte */
+.dashboard-card:last-child {
+  margin-right: 0;
+}
+
+/* Platzhalter für Diagramme oder andere Inhalte in den Karten */
+.placeholder-chart {
+  height: 200px; /* Größerer Platzhalter für Charts */
+  background-color: #2c3e50; /* Gleiche Hintergrundfarbe wie die Karte */
+  border-radius: 4px; /* Leicht abgerundete Ecken */
+}
+
+/* Tabelle für die Trainings */
+.training-table {
+  margin-top: 10px;
+  text-align: left;
+  max-height: 400px; /* Erhöhte maximale Höhe für Trainingsliste */
+  overflow-y: auto; /* Scrollbar für viele Trainings */
+}
+
+/* Styling für die Trainings-Tabelle */
+.training-table table {
+  width: 100%; /* Tabelle nimmt die volle Breite ein */
+  border-collapse: collapse; /* Entfernt Abstände zwischen Zellen */
+}
+
+.training-table th, .training-table td {
+  padding: 12px; /* Erhöhter Innenabstand für Trainings-Tabelle */
+  text-align: center; /* Zentrierte Ausrichtung für den Text in der Trainings-Tabelle */
+}
+
+.training-table th {
+  background-color: #003366;
+  color: white;
+}
+
+.training-table input[type="checkbox"] {
+  transform: scale(1.3); /* Vergrößert die Checkbox */
+}
+
+/* Hover-Effekt für Karten */
+.dashboard-card:hover {
+  background-color: #34495e; /* Hellere Hintergrundfarbe bei Hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Größerer Schatten */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Zentrierung des Inhaltscontainers */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+  .dashboard-cards-container {
+    flex-direction: column; /* Karten untereinander statt nebeneinander */
+  }
+  .dashboard-card {
+    margin-bottom: 20px; /* Abstand nach unten für Karten */
+  }
+td.status.badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+}
+
+td.status.badge.badge-in-progress {
+  background-color: orange !important;
+}
+
+td.status.badge.badge-rejected {
+  background-color: red !important;
+}
+
+td.status.badge.badge-accepted {
+  background-color: green !important;
+}
+
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rank-icon img {
+  margin-bottom: 10px;
+}
+
+.rank-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.badge.user-function {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.badge.user-function i {
+  margin-right: 8px;
+}
+
+.badge.activity-status {
+  font-size: 14px;
+  font-weight: bold;
+}

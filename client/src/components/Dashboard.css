@@ -1,0 +1,265 @@
+/* Grundlegendes Layout für das Dashboard */
+.dashboard-layout {
+  display: flex;
+  justify-content: center;  /* Zentriert den Inhalt horizontal */
+  background-color: #0f172a; /* Dunkelblauer Hintergrund */
+  color: white;
+  min-height: 100vh;        /* Stellt sicher, dass der Container mindestens die volle Höhe des Viewports einnimmt */
+  width: 100vw;             /* Stellt sicher, dass der Container die volle Breite des Viewports einnimmt */           /* Optional: Füge etwas Innenabstand hinzu, damit der Inhalt nicht direkt an den Rändern klebt */
+  box-sizing: border-box;   /* Schließt den Innenabstand in die Gesamtbreite ein */
+}
+
+/* Hauptinhalt des Dashboards */
+.main-content {
+  
+  flex-grow: 1;
+  padding: 15px;
+}
+
+.dashboard-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dashboard-card {
+  background-color: #34495e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 32%;
+  min-height: 200px;
+  margin-right: 20px; /* Abstand zwischen den Karten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation für den Hover-Effekt */
+}
+
+.dashboard-card:last-child {
+  margin-right: 0; /* Kein Abstand für die letzte Karte */
+}
+
+/* Hover-Effekt für die Dashboard-Karten */
+.dashboard-card:hover {
+  transform: translateY(-5px); /* Karte wird nach oben verschoben */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Schatten hinzufügen */
+}
+
+
+.placeholder-piechart, .placeholder-chart, .placeholder-info {
+  background-color: #2c3e50;
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #bdc3c7;
+}
+
+.dashboard-news {
+  background-color: #34495e;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation für den Hover-Effekt */
+}
+
+/* Hover-Effekt für die Dashboard-News */
+.dashboard-news:hover {
+  transform: translateY(-5px); /* Nachrichten-Box wird nach oben verschoben */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Schatten hinzufügen */
+}
+
+
+.profile-image {
+  width: 100px;  /* Oder eine andere geeignete Größe */
+  height: auto;  /* Behalte die Seitenverhältnisse */
+  border-radius: 50%;  /* Optional, um es rund zu machen */
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-header {
+  margin-bottom: 20px;
+  color: #E5E7EB; /* Heller Text */
+}
+
+.application-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phase-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3B82F6; /* Blaue Umrandung */
+  background-color: #1F2937; /* Dunkler Hintergrund */
+  color: white;
+}
+
+.class-info {
+  display: flex;
+  align-items: center;
+  background-color: #374151; /* Dunklere Box */
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.class-lock-icon {
+  margin-right: 5px;
+}
+
+.apply-button {
+  padding: 10px 20px;
+  background-color: #3B82F6; /* Blaue Hintergrundfarbe */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.apply-button:hover {
+  background-color: #2563EB; /* Dunklere Blau bei Hover */
+}
+
+.class-help-icon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Blurry-Effekt für den Hauptinhalt, wenn das Popup sichtbar ist */
+.blur-content {
+  filter: blur(5px);
+}
+
+/* Modal Styling */
+.popup-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1001; /* Höherer z-index als der overlay */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 400px; /* Größere Breite für die Darstellung */
+  color: white;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+}
+
+.popup-content button {
+  background-color: #2563EB;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Overlay für den Hintergrund des Popups */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Halbtransparent, um den Hintergrund abzudunkeln */
+  z-index: 1000; /* Direkt unter dem Popup */
+}
+
+/* Flexbox-basierte Auflistung der Informationen */
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Zwei gleich große Spalten */
+  align-items: center; /* Vertikale Ausrichtung der Inhalte */
+  padding: 10px 0; /* Abstand zwischen den Reihen */
+  border-bottom: 1px solid #374151; /* Trennung der Zeilen */
+}
+
+.info-row:last-child {
+  border-bottom: none; /* Kein Rand für die letzte Zeile */
+}
+
+/* Status Badge */
+.badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.badge.active {
+  background-color: #6fa884; /* Grün für aktiv */
+}
+
+/* Anwendungstyp Badges */
+.application-types {
+  display: flex; /* Flexbox für die Badge-Anordnung */
+  flex-direction: column; /* Spaltenanordnung */
+  gap: 5px; /* Abstand zwischen den Badges */
+  margin-left: 10px; /* Abstand zwischen der Legende und den Badges */
+}
+
+.badge.application-type {
+  margin: 0; /* Kein Margin, da die Flexbox den Abstand verwaltet */
+}
+
+.badge.application-type:nth-child(1) {
+  background-color: #4B5563; /* Dunkelgrau für Versetzungsantrag */
+}
+
+.badge.application-type:nth-child(2) {
+  background-color: #2563EB; /* Blau für Officer */
+}
+
+.badge.application-type:nth-child(3) {
+  background-color: #14b8a6; /* Dunkeltürkis für Praktikum */
+}
+
+/*Piechart*/
+.piechart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Zentriert die Elemente horizontal */
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap; /* Ermöglicht das Umbrüche */
+  justify-content: center; /* Zentriert die Legende */
+  margin-top: 10px; /* Abstand zwischen PieChart und Legende */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center; /* Vertikale Ausrichtung */
+  margin: 0 10px; /* Abstand zwischen den Legenden */
+}
+
+.legend-color {
+  width: 15px; /* Größe der farbigen Kugel */
+  height: 15px;
+  border-radius: 50%; /* Macht die Kugel rund */
+  margin-right: 5px; /* Abstand zwischen der Farbe und dem Text */
+}
+
+
+.legend-text {
+  color: white; /* Textfarbe */
+  font-size: 16px; /* Schriftgröße */
+}
+
+
+
+

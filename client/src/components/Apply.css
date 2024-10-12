@@ -1,0 +1,178 @@
+.apply-container {
+  display: flex;
+  justify-content: center;  /* Zentriert den Inhalt horizontal */
+  align-items: center;      /* Zentriert den Inhalt vertikal */
+  background-color: #0f172a; /* Dunkelblauer Hintergrund */
+  color: white;
+  min-height: 100vh;        /* Stellt sicher, dass der Container mindestens die volle Höhe des Viewports einnimmt */
+  width: 100vw;             /* Stellt sicher, dass der Container die volle Breite des Viewports einnimmt */           /* Optional: Füge etwas Innenabstand hinzu, damit der Inhalt nicht direkt an den Rändern klebt */
+  box-sizing: border-box;   /* Schließt den Innenabstand in die Gesamtbreite ein */
+}
+
+/* Nachricht (Success/Error) */
+.message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Erfolgsnachricht: Grüner Hintergrund */
+.message-success {
+  background-color: #d4edda; /* Hellgrüner Hintergrund */
+  color: #155724; /* Dunkelgrüne Schrift */
+  border: 2px solid #c3e6cb; /* Optionaler Rand */
+}
+
+/* Fehlermeldung: Roter Hintergrund */
+.message-error {
+  background-color: #f8d7da; /* Hellroter Hintergrund */
+  color: #721c24; /* Dunkelrote Schrift */
+  border: 2px solid #f5c6cb; /* Optionaler Rand */
+}
+
+.apply-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #f1f5f9; /* Heller Schriftzug */
+}
+
+.apply-content-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: flex-start; /* Damit die Boxen vertikal oben anfangen */
+}
+
+.apply-steps-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px; /* Abstand zwischen Schritt-Boxen und Formular */
+}
+
+.step-box-vertical {
+  display: flex;
+  align-items: center; /* Vertikale Zentrierung des Inhalts */
+  justify-content: center;
+  width: 30px; /* Kleinere Schritt-Boxen */
+  height: 30px; /* Kleinere Schritt-Boxen */
+  background-color: #1e293b;
+  border-radius: 50%;
+  color: #94a3b8;
+  font-size: 12px; /* Kleinere Schriftgröße */
+  margin-bottom: 5px; /* Kleinere Abstände */
+  position: relative;
+  transition: background-color 0.3s;
+  cursor: pointer; /* Zeiger ändern sich beim Hover */
+}
+
+.step-box-vertical.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.step-box-vertical.completed {
+  background-color: #1e3a8a; /* Dunkelblau für die abgeschlossene Box */
+  color: white; /* Weiß für den Haken */
+}
+
+.step-box-vertical-container {
+  display: flex;
+  align-items: center; /* Zentriert die Boxen und die Labels vertikal */
+  margin-bottom: 10px; /* Abstand zwischen den Schritt-Boxen */
+}
+
+.step-label {
+  margin-left: 10px; /* Abstand zwischen der Box und dem Label */
+  font-size: 14px; /* Schriftgröße für die Schritt-Namen */
+  color: #f1f5f9; /* Helle Schriftfarbe für bessere Lesbarkeit */
+}
+
+.apply-form {
+  width: 70%; /* Breite des Formulars */
+  max-width: 800px; /* Maximale Breite für bessere Lesbarkeit */
+  background-color: #1e293b; /* Hintergrundfarbe */
+  padding: 30px; /* Polsterung im Formular */
+  border-radius: 10px; /* Runde Ecken */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Schatten */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Linksbündig */
+  overflow: hidden; /* Überlauf verhindern */
+}
+
+.input-section {
+  width: 100%; /* Breite der Eingabebereiche */
+  background-color: #334155; /* Hintergrundfarbe für Eingabebereich */
+  padding: 20px; /* Polsterung */
+  border-radius: 8px; /* Runde Ecken */
+  margin-bottom: 20px; /* Abstand zwischen den Abschnitten */
+  box-sizing: border-box; /* Inkludiere Padding und Border in die Gesamtgröße */
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #94a3b8; /* Leichterer Text für Überschrift */
+}
+
+.text-input,
+.application-textarea {
+  width: calc(100% - 20px); /* Breite mit Berücksichtigung von Padding */
+  padding: 10px; /* Polsterung */
+  background-color: #1e293b; /* Hintergrundfarbe */
+  border: 1px solid #94a3b8; /* Randfarbe */
+  border-radius: 6px; /* Runde Ecken */
+  color: #f1f5f9; /* Schriftfarbe */
+  font-size: 16px; /* Schriftgröße */
+  margin-bottom: 10px; /* Abstand unter Eingabefeld */
+  box-sizing: border-box; /* Inkludiere Padding und Border in die Gesamtgröße */
+}
+
+.application-textarea {
+  resize: vertical; /* Vertikales Resizing erlauben */
+  min-height: 100px; /* Mindesthöhe für das Textarea */
+}
+
+.error-text {
+  color: #e74c3c; /* Fehlerfarbe */
+  font-size: 14px;
+  margin-top: -10px; /* Negative Marge für bessere Positionierung */
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.back-btn,
+.submit-btn {
+  padding: 10px 20px; /* Polsterung für die Buttons */
+  background-color: #2563eb; /* Hintergrundfarbe */
+  color: white; /* Schriftfarbe */
+  border: none; /* Kein Rand */
+  border-radius: 5px; /* Runde Ecken */
+  font-size: 16px; /* Schriftgröße */
+  cursor: pointer; /* Zeiger ändern sich beim Hover */
+}
+
+.back-btn {
+  background-color: #4b5563; /* Hintergrundfarbe für Zurück-Button */
+}
+
+.back-btn:disabled {
+  background-color: #1e293b; /* Dunkelblau bei deaktiviertem Zustand */
+  cursor: not-allowed; /* Cursor-Änderung bei Deaktivierung */
+}

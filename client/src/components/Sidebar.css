@@ -1,0 +1,122 @@
+/* Sidebar.css */
+.sidebar {
+  width: 60px; /* Breite der Sidebar im geschlossenen Zustand */
+  height: 100vh;
+  background-color: #34495e;
+  padding: 10px 0; /* Padding oben und unten */
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.sidebar.open {
+  width: 200px; /* Breitere Sidebar im ausgeklappten Zustand */
+}
+
+.sidebar:not(.open) {
+  width: 80px; /* Breite im geschlossenen Zustand */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.sidebar.open .user-info {
+  display: flex; /* Profilinformationen werden angezeigt, wenn Sidebar offen ist */
+}
+
+.profile-image.big {
+  width: 120px; /* Größe des Profilbilds im ausgeklappten Zustand */
+  height: 120px; /* Höhe anpassen */
+  border-radius: 50%; /* Rundes Profilbild */
+  margin-bottom: 10px; /* Abstand nach unten */
+  transition: width 0.3s ease, height 0.3s ease; /* Sanfter Übergang bei Größenänderung */
+}
+
+.profile-image.small {
+  width: 60px; /* Größe des Profilbilds im zugeklappten Zustand */
+  height: 60px; /* Höhe im zugeklappten Zustand */
+  margin-bottom: 2px; /* Optional: weniger Abstand im zugeklappten Zustand */
+  margin-top: 10px;
+}
+
+/* Zusätzliche Styling für das user-info Container */
+.user-info {
+  display: flex; /* Profilinformationen immer angezeigt */
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Abstand nach unten */
+}
+
+
+.user-details {
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #2c3e50;
+}
+
+.sidebar ul li:hover {
+  background-color: #3B82F6;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: padding 0.2s; /* Sanfter Übergang für die Polsterung */
+}
+
+/* Flexibles Styling für Icons */
+.sidebar-link svg {
+  margin: 0; /* Kein margin, um Platz zu sparen */
+  font-size: 24px; /* Standardgröße für Icons */
+}
+
+.sidebar-link span {
+  display: none; /* Text im eingeklappten Zustand ausgeblendet */
+}
+
+.sidebar.open .sidebar-link span {
+  display: inline; /* Text im ausgeklappten Zustand angezeigt */
+}
+
+.sidebar:not(.open) .sidebar-link {
+  justify-content: center; /* Icons zentrieren */
+}
+
+.sidebar:not(.open) .sidebar-link svg {
+  font-size: 24px; /* Icons im geschlossenen Zustand */
+}
+
+.sidebar ul li button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar ul li button:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}

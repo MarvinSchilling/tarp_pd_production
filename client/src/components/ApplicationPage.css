@@ -1,0 +1,44 @@
+.application-table {
+  width: 100%;
+  border-collapse: collapse; /* Zellenränder zusammenführen */
+  background-color: #2c3e50; /* Dunkler Hintergrund */
+  border-radius: 8px; /* Abgerundete Ecken */
+  overflow: hidden; /* Ecken überdecken */
+  margin-top: 20px;
+  color: white; /* Textfarbe */
+}
+
+.application-table th {
+  border: 1px solid #004080; /* Dunkler Rahmen für Kopfzeilen */
+  padding: 12px; /* Innenabstand */
+  text-align: center; /* Zentrierte Ausrichtung */
+  background-color: #003366; /* Dunklere Kopfzeilen-Hintergrundfarbe */
+  color: white; /* Textfarbe */
+  font-weight: bold; /* Fettschrift für Kopfzeilen */
+}
+
+.application-table td {
+  border: 1px solid #004080; /* Dunkler Rahmen für Zellen */
+  padding: 12px; /* Innenabstand */
+  text-align: center; /* Zentrierte Ausrichtung */
+  transition: background-color 0.3s; /* Weicher Übergang bei Hover */
+}
+
+.application-table tr:nth-child(even) {
+  background-color: #34495e; /* Alternierende Zeilenfarbe */
+}
+
+.application-table tr:hover {
+  background-color: #0056b3; /* Hover-Effekt */
+  color: white; /* Textfarbe bei Hover */
+}
+
+.application-table td {
+  font-size: 14px; /* Schriftgröße */
+}
+
+.application-table-wrapper {
+  max-height: 600px; /* Maximale Höhe der Tabelle */
+  overflow-y: auto; /* Scrollen bei Überschreitung */
+  margin-top: 20px; /* Abstand zur oberen Seite */
+}

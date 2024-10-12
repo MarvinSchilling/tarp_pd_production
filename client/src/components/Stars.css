@@ -1,0 +1,32 @@
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none; /* Klicks durchlassen */
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px; /* Größe der Sterne */
+    height: 2px; /* Größe der Sterne */
+    background-color: white; /* Farbe der Sterne */
+    border-radius: 50%;
+    animation: float 5s linear infinite; /* Geschwindigkeit erhöhen, z.B. von 10s auf 5s */
+  }
+  
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  

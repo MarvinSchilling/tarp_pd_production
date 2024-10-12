@@ -1,0 +1,61 @@
+/* ConsentPopup.css */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Sicherstellen, dass das Popup oben ist */
+  }
+  
+  .popup {
+    background-color: #003366; /* Hintergrundfarbe des Popups */
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: white; /* Textfarbe */
+  }
+  
+  .popup h2 {
+    margin: 0 0 10px; /* Abstände für die Überschrift */
+  }
+  
+  .popup p {
+    margin: 0 0 20px; /* Abstände für den Text */
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: space-between; /* Verteilung der Buttons */
+  }
+  
+  .popup-buttons button {
+    background-color: #006699; /* Hintergrundfarbe der Buttons */
+    border: none;
+    border-radius: 5px;
+    color: white; /* Textfarbe der Buttons */
+    padding: 10px 15px; /* Innenabstand der Buttons */
+    cursor: pointer; /* Zeiger beim Hover */
+    transition: background-color 0.3s; /* Übergangseffekt */
+  }
+  
+  .popup-buttons button:hover {
+    background-color: #005577; /* Hintergrundfarbe beim Hover */
+  }
+  
+  .popup-buttons button:last-child {
+    background-color: transparent; /* Hintergrundfarbe für den Abbrechen-Button */
+    color: #cccccc; /* Textfarbe für den Abbrechen-Button */
+  }
+  
+  .popup-buttons button:last-child:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover-Effekt für den Abbrechen-Button */
+  }
+  

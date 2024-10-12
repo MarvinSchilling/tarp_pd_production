@@ -1,0 +1,20 @@
+/* Notification.css */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #1e293b; /* Dunkelblauer Hintergrund */
+  color: #f1f5f9; /* Helle Schriftfarbe */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000; /* Stelle sicher, dass die Benachrichtigung immer sichtbar ist */
+}
+
+.close-btn {
+  background-color: transparent; /* Transparenten Hintergrund */
+  border: none; /* Kein Rand */
+  color: #2563eb; /* Blaue Schrift für den Schließen-Button */
+  cursor: pointer; /* Zeiger ändern sich beim Hover */
+  margin-top: 10px; /* Abstand zum Text */
+}

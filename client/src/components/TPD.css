@@ -1,0 +1,303 @@
+/* TPD.css */
+* {
+  box-sizing: border-box; /* Alle Elemente verwenden Border-Box */
+}
+
+.tpd-container {
+  padding: 20px;
+  background-color: #1e2432; /* Dunklerer Blauton */
+  flex: 1; /* Nimmt den verbleibenden Platz ein */
+  color: white; /* Textfarbe für bessere Lesbarkeit auf blauem Hintergrund */
+  border-radius: 8px; /* Abgerundete Ecken für das Container-Element */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+}
+
+.officer-table {
+  width: 100%; /* Tabelle nimmt die volle Breite ein */
+  border-collapse: collapse; /* Entfernt Abstände zwischen Zellen */
+  margin-top: 20px;
+  background-color: #2c3e50; /* Dunklere Hintergrundfarbe für die Tabelle */
+  border-radius: 8px; /* Abgerundete Ecken für die Tabelle */
+  overflow: hidden; /* Versteckt überflüssige Ecken */
+}
+
+/* Kopfzeilen zentrieren */
+.officer-table th {
+  border: 1px solid #004080; /* Dunklerer Rahmen für die Kopfzeilen */
+  padding: 12px; /* Innenabstand */
+  text-align: center; /* Zentrierte Ausrichtung für die Kopfzeilen */
+  background-color: #003366; /* Hintergrundfarbe für die Kopfzeilen */
+  color: white; /* Textfarbe für die Kopfzeilen */
+  font-weight: bold; /* Fettgedruckte Kopfzeilen */
+}
+
+/* Zellen anpassen */
+.officer-table td {
+  border: 1px solid #004080; /* Dunklerer Rahmen für die Zellen */
+  padding: 12px; /* Innenabstand */
+  transition: background-color 0.3s; /* Übergang für den Hover-Effekt */
+  text-align: center; /* Zentrierte Ausrichtung für die Kopfzeilen */
+}
+
+/* Zentriere die Inhalte für Dienstnummer und Aktiv-Spalte */
+.officer-table td.dienstnummer,
+.officer-table td.aktiv {
+  text-align: center; /* Zentrierte Ausrichtung für Inhalte */
+  text-align: center; /* Zentrierte Ausrichtung für die Zellen */
+}
+
+/* Abwechselnde Zeilenfarben für bessere Lesbarkeit */
+.officer-table tr:nth-child(even) {
+  background-color: #2c3e50; /* Dunklerer Blauton für gerade Zeilen */
+}
+
+.officer-table tr:hover {
+  background-color: #0056b3; /* Dunklerer Farbton bei Hover */
+  color: white; /* Textfarbe ändern beim Hover */
+}
+
+.officer-table td {
+  font-size: 14px; /* Schriftgröße für die Tabellenzellen */
+}
+
+/* Styling für den "Mitarbeiter hinzufügen"-Button */
+.add-button {
+  background-color: #003366; /* Hintergrundfarbe für den Button */
+  color: white; /* Textfarbe */
+  border: none; /* Kein Rahmen */
+  padding: 10px 15px; /* Innenabstand für den Button */
+  border-radius: 5px; /* Abgerundete Ecken */
+  cursor: pointer; /* Zeigt, dass der Button klickbar ist */
+  font-size: 16px; /* Schriftgröße */
+}
+
+.add-button:hover {
+  background-color: #0056b3; /* Farbänderung bei Hover */
+}
+
+/*Popup*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Sicherstellen, dass das Modal oben ist */
+}
+
+.modal-content {
+  background-color: #003366;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #ff6b6b, #ff3f3f); /* Farbverlauf für den Hintergrund */
+  border: none; /* Kein Rahmen */
+  border-radius: 50%; /* Runde Form */
+  color: white; /* Textfarbe */
+  width: 40px; /* Breite */
+  height: 40px; /* Höhe */
+  font-size: 1.5em; /* Schriftgröße */
+  display: flex; /* Flexbox für zentrierte Inhalte */
+  justify-content: center; /* Zentrieren des Inhalts */
+  align-items: center; /* Zentrieren des Inhalts */
+  cursor: pointer; /* Zeiger-Cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+  transition: background 0.3s, transform 0.2s; /* Übergang für Effekte */
+}
+
+.close-button:hover {
+  background: linear-gradient(135deg, #ff3f3f, #ff1f1f); /* Dunklerer Farbverlauf bei Hover */
+  transform: scale(1.1); /* Vergrößern bei Hover */
+}
+
+.close-button:focus {
+  outline: none; /* Fokusrahmen entfernen */
+}
+
+/* Allgemeiner Stil für die Nachrichten */
+.alert {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Erfolgsnachricht: Grüner Hintergrund, weiße Schrift */
+.alert-success {
+  background-color: #d4edda; /* Hellgrüner Hintergrund */
+  color: #155724; /* Dunkelgrüne Schrift */
+  border: 2px solid #c3e6cb; /* Optionaler Rand */
+}
+
+/* Fehlermeldung: Roter Hintergrund, weiße Schrift */
+.alert-error {
+  background-color: #f8d7da; /* Hellroter Hintergrund */
+  color: #721c24; /* Dunkelrote Schrift */
+  border: 2px solid #f5c6cb; /* Optionaler Rand */
+}
+
+
+/* Formular Styling (unverändert) */
+.mitarbeiter-formular {
+  background-color: #2c3e50; /* Dunklerer Hintergrund für das Formular */
+  padding: 20px; /* Innenabstand für das Formular */
+  border-radius: 8px; /* Abgerundete Ecken für das Formular */
+  margin-top: 20px; /* Abstand zum vorherigen Element */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+}
+
+.mitarbeiter-formular label {
+  display: block; /* Jedes Label nimmt eine neue Zeile ein */
+  margin-bottom: 8px; /* Abstand unter dem Label */
+}
+
+.mitarbeiter-formular select,
+.mitarbeiter-formular input[type="text"] {
+  width: 100%; /* Beide nehmen die volle Breite ein */
+  padding: 10px; /* Innenabstand */
+  border: 1px solid #004080; /* Rahmenfarbe */
+  border-radius: 5px; /* Abgerundete Ecken */
+  background-color: #1e2432; /* Hintergrundfarbe */
+  color: white; /* Textfarbe */
+  font-size: 16px; /* Schriftgröße */
+  margin-bottom: 15px; /* Abstand unter dem Dropdown */
+}
+
+.mitarbeiter-formular select[multiple] {
+  height: auto; /* Höhe automatisch anpassen */
+  min-height: 100px; /* Mindesthöhe für Mehrfachauswahl */
+  overflow: auto; /* Scrollbar anzeigen, wenn notwendig */
+}
+
+.mitarbeiter-formular button {
+  background-color: #003366; /* Hintergrundfarbe für den Button */
+  color: white; /* Textfarbe */
+  border: none; /* Kein Rahmen */
+  padding: 10px 15px; /* Innenabstand für den Button */
+  border-radius: 5px; /* Abgerundete Ecken */
+  cursor: pointer; /* Zeigt, dass der Button klickbar ist */
+  font-size: 16px; /* Schriftgröße */
+}
+
+.mitarbeiter-formular button:hover {
+  background-color: #0056b3; /* Farbänderung bei Hover */
+}
+
+/* Styling für die Aktiv-Frage */
+.aktiv-question {
+  display: flex; /* Flexbox für bessere Ausrichtung */
+  align-items: center; /* Zentriert die Frage und die Optionen */
+  margin-bottom: 15px; /* Abstand unter den Optionen */
+}
+
+.aktiv-question span {
+  margin-right: 10px; /* Abstand zwischen Frage und Optionen */
+  font-weight: bold; /* Frage fettgedruckt */
+}
+
+/* Styling für die Aktiv-Optionen */
+.aktiv-options {
+  display: flex; /* Flexbox für die Optionen */
+  align-items: center; /* Zentriert die Optionen */
+}
+
+.aktiv-options label {
+  margin-right: 20px; /* Abstand zwischen den Radio-Buttons */
+  cursor: pointer; /* Zeigt, dass es klickbar ist */
+}
+
+.aktiv-options input[type="radio"] {
+  margin-right: 5px; /* Abstand zwischen dem Radio-Button und dem Text */
+}
+
+
+/* Sidebar (unverändert) */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sidebar h2 {
+  margin-top: 15px;
+}
+
+.sidebar img {
+  border-radius: 50%;
+  width: 184px;
+  height: 184px;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #bdc3c7;
+}
+
+.sidebar ul li:hover {
+  color: white; /* Hover-Effekt für die Sidebar-Links */
+}
+
+.table-wrapper {
+  max-height: 600px; /* Feste Höhe für den Bereich */
+  overflow-y: auto; /* Vertikales Scrollen ermöglichen */
+  overflow-x: hidden; /* Horizontales Scrollen verhindern */
+  margin-top: 20px; /* Abstand oben */
+}
+
+.edit-button {
+  background-color: #28a745; /* Grüner Hintergrund */
+  color: white; /* Weißer Text */
+  border: none; /* Keine Rahmenlinie */
+  border-radius: 5px; /* Abgerundete Ecken */
+  padding: 5px 10px; /* Innenabstand */
+  cursor: pointer; /* Handcursor beim Hover */
+  transition: background-color 0.3s, transform 0.2s; /* Sanfte Übergänge */
+}
+
+.edit-button:hover {
+  background-color: #218838; /* Dunklerer Grünton beim Hover */
+  transform: scale(1.05); /* Leicht vergrößern beim Hover */
+}
+
+.edit-button:focus {
+  outline: none; /* Keine Umrandung beim Fokus */
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
